@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+			<property name="scopes">
+				<map>
+					<entry>
+						<key><value>thread</value></key>
+						<bean class="com.jemmy.spring.chapter3.ThreadScope" />
+					</entry>
+				</map>
+			</property>
+		</bean>
+		<bean id="helloApi" class="com.jemmy.spring.chapter2.helloworld.HelloImpl" scope="thread" />
+
+</beans>

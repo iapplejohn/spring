@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<!-- 通过构造器参数索引方式依赖注入 -->
+		<bean id="bean" class="com.jemmy.spring.chapter3.HelloImpl4">
+			<property name="message" value="Hello World!" />
+			<property name="index">
+				<value>1</value>
+			</property>
+		</bean>
+
+</beans>

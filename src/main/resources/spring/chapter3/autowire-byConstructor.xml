@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean class="com.jemmy.spring.chapter2.helloworld.HelloImpl" />
+		<!-- 从自动装配候选者中去除 -->
+		<bean class="com.jemmy.spring.chapter2.helloworld.HelloImpl" primary="true" />
+		<bean id="bean" class="com.jemmy.spring.chapter3.bean.HelloApiDecorator" autowire="constructor" />
+
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- boolean参数值标准用true/false -->
+	<bean id="bean1" class="com.jemmy.spring.chapter3.bean.BooleanTestBean">
+		<property name="success" value="true" />
+	</bean>
+	<!-- boolean参数值可以用on/off -->
+	<bean id="bean2" class="com.jemmy.spring.chapter3.bean.BooleanTestBean">
+		<property name="success" value="on" />
+	</bean>
+	<!-- boolean参数值可以用yes/no -->
+	<bean id="bean3" class="com.jemmy.spring.chapter3.bean.BooleanTestBean">
+		<property name="success" value="yes" />
+	</bean>
+	<!-- boolean参数值可以用1/0 -->
+	<bean id="bean4" class="com.jemmy.spring.chapter3.bean.BooleanTestBean">
+		<property name="success" value="1" />
+	</bean>
+
+</beans>
