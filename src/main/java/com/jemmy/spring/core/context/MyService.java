@@ -7,6 +7,8 @@
  */
 package com.jemmy.spring.core.context;
 
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,5 +19,13 @@ import org.springframework.stereotype.Service;
  * @date 2017/9/16
  */
 @Service
-public class MyService {
+public class MyService implements InitializingBean {
+
+    @Value("${testvalue:abc:https://www.jemmy.com}")
+    private String test;
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println(test);
+    }
 }
